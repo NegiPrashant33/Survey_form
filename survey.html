@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="surveyStyle.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<title>Survey Form</title>
+</head>
+<div id="bgImage"></div>
+<body>
+	<div id="container">
+		<div class="heading">
+			<h1 id="title">freeCodeCamp Survey Form</h1>
+			<p id="description"><i>Thank you for taking the time to help us improve the platform</i></p>
+		</div>
+	
+		<form id="survey-form">
+			<div class="form-group">
+				<label for="name" id="name-label">Name</label>
+				<input type="text" id="name" name="userName" placeholder="Enter your name" required>
+			</div>
+			
+			<div class="form-group">
+				<label for="email" id="email-label">Email</label>
+				<input type="email" id="email" name="userID" 
+				placeholder="Enter your Email"
+				pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?" 
+				required>
+			</div>
+
+			<div class="form-group">
+				<label for="number" id="number-label">Age (optional)</label>
+				<input type="number" id="number" name="userAge" placeholder="Age" min="10" max="99"
+				pattern="(0?\.\d+|[1-9]\d*\.?\d*)">
+			</div>
+
+			
+			<div class="form-group">
+				<label>Which option best describe your current role?</label>
+				<select aria-required="true" id="dropdown">
+					<option value="">Select current role</option>
+					<option value="1">Student</option>
+					<option value="2">Full time job</option>
+					<option value="3">Full time earner</option>
+					<option value="4">Prefer not to say</option>
+					<option value="5">Other</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label>Would you recommend freeCodeCamp to a friend?</label>
+				<label><input type="radio" name="form" value="1" checked>Definitely</label>
+				<label><input type="radio" name="form" value="2">Maybe</label>
+				<label><input type="radio" name="form" value="3">Not sure</label>
+			</div>
+			
+
+			<div class="form-group">
+				<label>What is your favorite feature of freeCodeCamp?</label>
+				<select aria-required="true" id="dropdown">
+					<option value="">Select an option</option>
+					<option value="1">Challenges</option>
+					<option value="2">Projects</option>
+					<option value="3">Community</option>
+					<option value="4">Open Source</option>
+				</select>
+			</div>
+			
+			
+			<div class="form-group">
+				<label>What would you like to see improved? (Check all that apply)</label>
+				<label><input type="checkbox" name="box" value="1">Front-end projects</label>
+				<label><input type="checkbox" name="box" value="2">Back-end projects</label>
+				<label><input type="checkbox" name="box" value="3">Data Visualization</label>
+				<label><input type="checkbox" name="box" value="4">Challenges</label>
+				<label><input type="checkbox" name="box" value="5">Open Source Community</label>				
+				<label><input type="checkbox" name="box" value="6">Gitter help rooms</label>		
+				<label><input type="checkbox" name="box" value="7">Videos</label>			
+				<label><input type="checkbox" name="box" value="8">City Meetups</label>			
+				<label><input type="checkbox" name="box" value="9">Wiki</label>				
+				<label><input type="checkbox" name="box" value="10">Forum</label>				
+				<label><input type="checkbox" name="box" value="11">Additional Courses</label>
+			</div>
+			
+			<div class="form-group">
+				<label for="comments">Any comments or suggestions?</label>
+				<textarea name="comments" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+			</div>
+
+			<div class="form-group">
+				<button type="submit" id="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
