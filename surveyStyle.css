@@ -9,7 +9,7 @@ body {
     line-height: 2em;
     margin: 0;
     padding: 0;
-    background-image: url(../img/bgImage.jpg);
+    background-image: url(bgImage.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
